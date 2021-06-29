@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+    <title>placement pred</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        /* background: url(C:/Users/HP/Desktop/Snehal/PlacementML/templates/school.jpg) no-repeat center center fixed;
+        background-size: cover; */
+        background-color: #cccccc
+      }
+      .heading{
+    text-align: center;
+    }
+    /* .mb-3{ */
+      /* justify-content: center;
+      justify-items: center; */
+      /* max-width: 500px; */
+    /* } */
+    /* .form{
+      background-image: url("school.jpg"); 
+      text-align: center; 
+     
+    } */
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h3>Please fill the details</h3>
+    </div>
+    <div class="form">
+        <form  action='', method='POST' name="values">
+            <div class="mb-3">
+                <select name="val" class="form-select" aria-label="Default select example" required="required">
+                    <option selected>Gender</option>
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                  </select>
+              </div>
+            <div class="form-floating mb-3">
+                <input name="sp" type="text" class="form-control" id="floatingInput" placeholder="SSC Percentage" required="required">
+                <label for="floatingInput">SSC Percentage</label>
+              </div>
+              <div class="mb-3">
+                  <select name="sb" class="form-select" aria-label="Default select example" required="required">
+                    <option selected>SSC Board</option>
+                    <option value="0">Central</option>
+                    <option value="1">Other</option>
+                  </select>
+              </div>
+              <div class="form-floating mb-3">
+                <input name="hp" type="text" class="form-control" id="floatingInput" placeholder="HSC Percentage" required="required">
+                <label for="floatingInput">HSC Percentage</label>
+              </div>
+              <div class="mb-3">
+                <select name="hb" class="form-select" aria-label="Default select example" required="required">
+                    <option selected>HSC Board</option>
+                    <option value="0">Central</option>
+                    <option value="1">Other</option>
+                  </select>
+              </div>
+              <div class="mb-3">
+                <select name="hs" class="form-select" aria-label="Default select example" required="required">
+                    <option selected>HSC Specialisation</option>
+                    <option value="0">Arts</option>
+                    <option value="1">Commerce</option>
+                    <option value="2">Science</option>
+                  </select>
+              </div>
+              <div class="form-floating mb-3">
+                <input name="dp" type="text" class="form-control" id="floatingInput" placeholder="Bachlor Degree Percentage" required="required">
+                <label for="floatingInput">Bachlor Degree Percentage</label>
+              </div>
+              <div class="mb-3">
+                <select name="ds" class="form-select" aria-label="Default select example" required="required">
+                    <option selected>Bachlor degree Specialisation</option>
+                    <option value="0">Commerce & Managment</option>
+                    <option value="1">Others</option>
+                    <option value="2">Science & Technology</option>
+                  </select>
+              </div>
+              <div class="mb-3">
+                <select name="we" class="form-select" aria-label="Default select example" required="required">
+                    <option selected>Work Experience</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                  </select>
+              </div>
+              <div class="form-floating mb-3">
+                <input name="ep" type="text" class="form-control" id="floatingInput" placeholder="ETEST Percentage" required="required">
+                <label for="floatingInput">Employee test score by college</label>
+              </div>
+              <div class="mb-3">
+                <select name="ms" class="form-select" aria-label="Default select example" required="required">
+                    <option selected>MBA Specialisation</option>
+                    <option value="0">Marketing & Finance</option>
+                    <option value="1">Marketing & HR</option>
+                  </select>
+              </div>
+              <div class="form-floating mb-3">
+                <input name="mp" type="text" class="form-control" id="floatingInput" placeholder="MBA Percentage" required="required">
+                <label for="floatingInput">MBA Percentage</label>
+              </div>
+              
+              <div class="btn">
+                <button type="submit" class="btn btn-outline-dark mt-5">Submit</button>
+              </div>  
+          </form>
+    </div>
+    <br><br><br>
+    {{ prediction_text }} 
+    <!-- <script type="text/javascript" src="/main.js"></script> -->
+</body>
+</html>
