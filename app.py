@@ -4,7 +4,7 @@ import pickle
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-model = pickle.load(open('C:/Users/HP/Desktop/Snehal/PlacementML/model.pkl','rb'))
+model = pickle.load(open('model.pkl','rb'))
 # modelreg = pickle.load(open('C:/Users/HP/Desktop/Snehal/PlacementML/modelreg.pkl','rb'))
 
 @app.route('/')
