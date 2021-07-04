@@ -1,4 +1,3 @@
-import re
 import numpy as np
 import pickle
 from flask import Flask, render_template, request
@@ -25,16 +24,16 @@ def predict():
         feature.append(x)
     # print(feature)
     final_features = [np.array(feature)]
-    # feature = final_features.reshape(0,1)
-    # print(feature)
-    prediction = model.predict(final_features)
-    if(prediction == 1):
-        # salarypred = modelreg.predict(final_features)
-        return render_template('index.html',prediction_text = 'Placed')
+
+    if (np.array(final_features).shape[1] != 12):
+        return render_template('index.html',error = "Please fill each field!")
     else:
-        return render_template('index.html',prediction_text= 'Not Placed')
+        prediction = model.predict(final_features)
+        if(prediction == 1):
+            # salarypred = modelreg.predict(final_features)
+            return render_template('index.html',prediction_text = 'Placed')
+        else:
+            return render_template('index.html',prediction_text= 'Not Placed')
     
-
-
 if __name__ == "__main__":
     app.run(debug=True)
