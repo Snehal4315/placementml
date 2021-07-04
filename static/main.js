@@ -1,4 +1,4 @@
-console.log('hii');
+// console.log('hii');
 var x;
 document.getElementById('error').style.color = 'red';
 document.getElementById('error').style.fontSize = '30px'
